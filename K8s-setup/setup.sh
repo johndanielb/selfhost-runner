@@ -23,5 +23,5 @@ if kubectl -n actions get secrets self-hosted-runner-creds > /dev/null && [[ "$1
     echo "secret 'self-hosted-runner-creds' already exist."
     exit 1
 else
-    envsubst "\$ACTIONS_PAT" < k8s_setup/authorize.yml | kubectl -n actions apply -f -
+    envsubst "\$ACTIONS_PAT" < K8s-setup/authorize.yml | kubectl -n actions apply -f -
 fi
