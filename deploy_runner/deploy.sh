@@ -26,4 +26,4 @@ if [ -z "$ACTIONS_IMAGE_NAME" ]; then
 fi
 
 # Refresh Deployment
-envsubst "\$ACTIONS_GITHUB_REPO\$ACTIONS_IMAGE_NAME\$ACTIONS_DEPLOY_NAME" < deployment.yml | kubectl -n actions apply -f -
+envsubst "\$ACTIONS_GITHUB_REPO\$ACTIONS_IMAGE_NAME\$ACTIONS_DEPLOY_NAME" < deployment.yaml | kubectl -n actions apply -f -
